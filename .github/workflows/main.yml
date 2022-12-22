@@ -12,24 +12,33 @@ jobs:
     environment: npm
 
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           node-version: '16.x'
           registry-url: 'https://registry.npmjs.org'
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 6.31.0
-      - name: Install modules
+
+
+      # - uses: pnpm/action-setup@v2
+      #   with:
+      #     version: 6.31.0
+      - name: 安装依赖
         run: yarn
       - name: Build
         run: yarn build
-      - name: 'Publish to the npm registry'
-        uses: primer/publish@3.0.0
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_AUTH_TOKEN: ${{secrets.VITE_SHELL_ELECTRON_BUILDER}}
 
-        with:
-          default_branch: 'release'
-          dir: '.'
+
+      - name: '发布npm'
+      - run: npm ci
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.VITE_SHELL_ELECTRON_BUILDER }}
+
+        # uses: primer/publish@3.0.0
+        # env:
+        #   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        #   NPM_AUTH_TOKEN: ${{secrets.VITE_SHELL_ELECTRON_BUILDER}}
+
+        # with:
+        #   default_branch: 'release'
+        #   dir: '.'
