@@ -6,7 +6,6 @@ tsconfig.json
 pnpm-lock.yaml
 
 node_modules/
-examples/
 src/
 
 demo.gif
