@@ -28,4 +28,4 @@ jobs:
 
         with:
           default_branch: 'release'
-          dir: ''
+          dir: '.'
