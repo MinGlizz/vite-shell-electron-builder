@@ -4,7 +4,6 @@ import EleMain, { eleShellBuild } from './main'
 export default function vitePluginTemplate(
   _configEle: eleShellBuild | undefined = {
     dirName: 'app',
-    dependencies: [],
     entry: 'dist',
     outDir: 'build',
   },
