@@ -1,6 +1,6 @@
 {
   "name": "vite-shell-electron-builder",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A vite plugin shell electron builder",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -13,7 +13,7 @@
     "vite",
     "plugin"
   ],
-  "author": "Jeddy",
+  "author": "Liming",
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^17.0.35",
