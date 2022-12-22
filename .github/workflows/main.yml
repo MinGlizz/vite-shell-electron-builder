@@ -13,9 +13,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@master
-      - uses: pnpm/action-setup@v16.13.0
+      - uses: pnpm/action-setup@v2
         with:
-          version: 6.32.0
+          version: 6.31.0
       - name: Install modules
         run: yarn
       - name: Build
