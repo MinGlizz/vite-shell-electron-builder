@@ -13,7 +13,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@master
-      - uses: pnpm/action-setup@v2.1.0
+      - uses: pnpm/action-setup@v16.1.0
         with:
           version: 6.32.0
       - name: Install modules
