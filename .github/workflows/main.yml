@@ -24,8 +24,8 @@ jobs:
       - name: "Publish to the npm registry"
         uses: primer/publish@3.0.0
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_AUTH_TOKEN: ${{secrets.npm_token}}
+          GITHUB_TOKEN: ${{ secrets.vite-shell-electron-builder }}
+          NPM_AUTH_TOKEN: ${{secrets.vite-shell-electron-builder}}
          
         with:
           default_branch: 'release'
