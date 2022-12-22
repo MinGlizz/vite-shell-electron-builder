@@ -2,6 +2,9 @@
 .eslintignore
 .eslintrc
 .gitignore
+.github
+.vscode
+.prettierrc
 tsconfig.json
 pnpm-lock.yaml
 
